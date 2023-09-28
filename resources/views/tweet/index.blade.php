@@ -5,9 +5,12 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Home</div>
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        Tweets
+                        <button class="btn btn-primary">New Tweet</button>
+                    </div>
 
-                    <div class="card-body d-flex flex-column">
+                    <div class="card-body">
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">
                                 {{ session('status') }}
@@ -15,10 +18,6 @@
                         @endif
 
                         You are logged in!
-
-                        <form method="GET" action={{ route('tweet.index') }}>
-                            <button class="btn btn-primary">Go To Tweets</button>
-                        </form>
                     </div>
                 </div>
             </div>
