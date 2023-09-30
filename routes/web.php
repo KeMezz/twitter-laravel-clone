@@ -21,5 +21,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['prefix' => 'tweet', 'middleware' => 'auth'], function () {
     Route::get('index', 'TweetController@index')->name('tweet.index');
-    Route::get('create', 'TweetController@create')->name('tweet.create');
+    Route::post('create', 'TweetController@create')->name('tweet.create');
 });
