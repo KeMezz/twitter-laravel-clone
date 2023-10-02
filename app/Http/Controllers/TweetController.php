@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Tweets;
 
 class TweetController extends Controller
 {
@@ -13,6 +14,8 @@ class TweetController extends Controller
      */
     public function index()
     {
+        $tweets = Tweets::all();
+        dd($tweets);
         return view('tweet.index');
     }
 
