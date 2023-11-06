@@ -17,7 +17,9 @@
                             </div>
                         @endif
 
-                        You are logged in!
+                        @foreach($tweets as $tweet)
+                            <p>{{ $tweet->text }}</p>
+                        @endforeach
                     </div>
                 </div>
             </div>
